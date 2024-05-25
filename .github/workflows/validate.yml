@@ -13,7 +13,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: List directory contents
-        run: ls -la $HOME/.config/rclone
+        run: |
+          mkdir -p ~/.config/rclone
+          ls -la ~/.config/rclone
 
       - name: View rclone configuration
         run: cat ~/.config/rclone/rclone.conf
