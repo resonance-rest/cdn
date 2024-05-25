@@ -13,4 +13,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: View rclone configuration
-        run: cat $HOME/.config/rclone/rclone.conf
+        run: cat ~/.config/rclone/rclone.conf
