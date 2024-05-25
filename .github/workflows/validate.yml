@@ -12,5 +12,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: List directory contents
+        run: ls -la $HOME/.config/rclone
+
       - name: View rclone configuration
         run: cat ~/.config/rclone/rclone.conf
