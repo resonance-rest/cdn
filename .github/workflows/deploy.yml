@@ -23,5 +23,5 @@ jobs:
 
       - name: Sync to Cloudflare R2
         run: |
-          rclone --multi-thread-streams 4 sync ./cdn/ r2:wuwa --config ~/.config/rclone/rclone.conf --exclude "*.ini" --progress --update --no-update-modtime
+          rclone --multi-thread-streams 4 sync ./cdn/ r2:r2 --config ~/.config/rclone/rclone.conf --exclude "*.ini" --progress --update --no-update-modtime
         # syncs the contents of the ./r2/ directory to the r2 bucket, with the --update flag to only upload new files and skip existing ones
