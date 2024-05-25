@@ -16,6 +16,8 @@ jobs:
         run: |
           mkdir -p ~/.config/rclone
           ls -la ~/.config/rclone
+          echo ${{ secrets.RCLONE_CONFIG }}
+          echo ${{ secrets.RCLONE_CONFIG }} | base64 -d > ~/.config/rclone/rclone.conf
 
       - name: View rclone configuration
         run: cat ~/.config/rclone/rclone.conf
